@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 商品格子列表 -->
+  <view class="grid-container">
+    <!-- 第一个商品格子 -->
+    <view class="grid-item" bindtap="showModifyDialog" data-index="0">
+      <image src="{{productData[0].image}}" class="grid-image" style="width: 250rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
+      <text class="grid-text">{{productData[0].name}}</text>
+    </view>
+
+    <!-- 第二个商品格子 -->
+    <view class="grid-item" bindtap="showModifyDialog" data-index="1">
+      <image src="{{productData[1].image}}" class="grid-image" style="width: 250rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
+      <text class="grid-text">{{productData[1].name}}</text>
+    </view>
+
+    <!-- 第三个商品格子 -->
+    <view class="grid-item" bindtap="showModifyDialog" data-index="2">
+      <image src="{{productData[2].image}}" class="grid-image" style="width: 250rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
+      <text class="grid-text">{{productData[2].name}}</text>
+    </view>
+
+    <!-- 第四个商品格子 -->
+    <view class="grid-item" bindtap="showModifyDialog" data-index="3">
+      <image src="{{productData[3].image}}" class="grid-image" style="width: 250rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
+      <text class="grid-text">{{productData[3].name}}</text>
+    </view>
+  </view>
+
+  <!-- 查看商品吸引力按钮 -->
+  <view class="attractiveness-button" bindtap="gotolinePage" style="position: relative; left: 0rpx; top: -154rpx">
+    查看商品吸引力
+  </view>
+
+  <!-- 自定义模态弹窗 -->
+  <view wx:if="{{showDialog}}" class="dialog-mask">
+    <view class="dialog">
+      <view class="dialog-header">修改商品信息</view>
+      <view class="dialog-content">
+        <input placeholder="输入新的商品名称" bindinput="inputProductName" value="{{newProductName}}" class="dialog-input" />
+        <view class="image-upload">
+          <button class="upload-button" bindtap="chooseImage">上传新图片</button>
+          <image wx:if="{{newImageTempPath}}" src="{{newImageTempPath}}" class="uploaded-image"></image>
+        </view>
+      </view>
+      <view class="dialog-footer">
+        <button class="dialog-button cancel-button" bindtap="cancelModify">取消</button>
+        <button class="dialog-button confirm-button" bindtap="confirmModify">确认修改</button>
+      </view>
+    </view>
+  </view>
+</view>
