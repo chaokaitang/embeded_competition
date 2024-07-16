@@ -1,10 +1,10 @@
 Page({
   data: {
     productData: [
-      { id: 0, name: '乒乓球', views: 150, purchases: 30, image: '/img/pingpong.jpeg' },
-      { id: 1, name: '胶带', views: 120, purchases: 45, image: '/img/latex.png' },
-      { id: 2, name: 'U盘', views: 200, purchases: 60, image: '/img/Ustick.jpeg' },
-      { id: 3, name: 'STM32', views: 170, purchases: 50, image: '/img/STM32.jpg' }
+      { id: 0, name: '乒乓球', purchases: [40, 36, 65, 30, 78, 40, 36], image: '/img/pingpong.jpeg' },
+      { id: 1, name: '胶带', purchases: [12, 50, 51, 35, 70, 30, 20], image: '/img/latex.jpg' },
+      { id: 2, name: 'U盘', purchases: [10, 30, 31, 50, 40, 20, 10], image: '/img/Ustick.jpeg' },
+      { id: 3, name: 'STM32', purchases: [20, 35, 11, 53, 20, 70, 77], image: '/img/STM32.jpg' }
     ],
     showDialog: false,
     modifyIndex: -1,

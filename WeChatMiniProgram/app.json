@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/enter/enter",
-    "pages/line/index",
-    "pages/pie/index"
+    "pages/line/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
